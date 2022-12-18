@@ -153,7 +153,7 @@ tnoremap <Esc><Esc> <C-\><C-n>
 
 " ======================== Commands ========================
 command! Fd call fzf#run(fzf#wrap({'source': 'fd --follow --type f --hidden --exclude .git',
-            \ 'options': "--preview='less {}'"}))
+            \ 'options': "--preview='bat --color=always --style=numbers --line-range=:500 {}'"}))
 
 command! -bang -nargs=* Find call fzf#vim#grep('rg --column --line-number --no-heading --fixed-strings --ignore-case --no-ignore --hidden --follow --glob "!.git/*" --color "always" '.shellescape(<q-args>), 1, <bang>0)
 
