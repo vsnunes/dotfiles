@@ -1,0 +1,87 @@
+[core]
+    editor = nvim
+    eol = lf
+    whitespace = trailing-space,space-before-tab,indent-with-non-tab
+
+[include]
+    path = ~/.config/git/config.local
+
+[init]
+    defaultBranch = main
+
+[web]
+    browser = firefox
+
+[color]
+    ui = auto
+
+[commit]
+	gpgsign = true
+
+[pull]
+    ff = only
+
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+    required = true
+
+[diff]
+    tool = vimdiff
+
+[difftool]
+    prompt = false
+
+[url "https://github.com/"]
+    insteadOf = gh:
+
+[url "https://gitlab.com/"]
+    insteadOf = gl:
+
+[alias]
+    a = add --all
+
+    c = commit
+    ca = commit --amend
+    cm = commit -m
+
+    co = checkout
+
+    cl = clone
+    cld = clone --depth 1
+
+    d = diff
+    dc = diff --cached
+    ds = diff --staged
+
+    f = fetch
+    fa = fetch --all
+
+    l = log --oneline
+    lg = log --oneline --graph --decorate
+
+    p = push
+    pf = push --force-with-lease
+
+    pl = pull
+    pb = pull --rebase
+
+    m = merge
+    ma = merge --abort
+    mc = merge --continue
+    ms = merge --skip
+
+    r = rebase
+    ra = rebase --abort
+    rc = rebase --continue
+    rs = rebase --skip
+
+    s = status
+
+    sp = stash push --include-untracked
+    sl = stash list
+
+    t = tag
+
+    x = !git commit -m \"$(curl --silent --fail https://whatthecommit.com/index.txt)\"

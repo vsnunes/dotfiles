@@ -1,6 +1,9 @@
 # MacOS DS_Store
 **/.DS_Store
 
+# Git local configurations
+git/.config/git/config.local
+
 # ZSH
 zsh/.config/zsh/.zsh_sessions
 zsh/.config/zsh/.zcompdump
