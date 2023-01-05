@@ -75,6 +75,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'dense-analysis/ale'
     Plug 'scrooloose/nerdcommenter'
     Plug 'junegunn/vim-easy-align'
+    Plug 'sheerun/vim-polyglot'
 call plug#end()
 
 " Start interactive EasyAlign in visual mode (e.g. vipga)
