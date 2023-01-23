@@ -71,6 +71,7 @@ call plug#begin('~/.local/share/nvim/plugged')
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'tpope/vim-surround'
+    Plug 'tpope/vim-repeat'
     Plug 'valloric/youcompleteme', { 'do': './install.py' }
     Plug 'dense-analysis/ale'
     Plug 'scrooloose/nerdcommenter'
@@ -85,7 +86,7 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " Theme settings
-set background=light
+set background=dark
 colorscheme PaperColor
 
 " ======================== Custom plugins configuration ========================
