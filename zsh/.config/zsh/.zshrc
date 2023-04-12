@@ -49,6 +49,7 @@ alias vim="nvim"
 alias d="docker"
 alias ..="cd .."
 alias bc="bc -l"
+alias tf="terraform"
 
 alias -s md="nvim"
 alias -s json="jq"

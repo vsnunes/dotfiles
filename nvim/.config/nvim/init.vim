@@ -123,6 +123,7 @@ nnoremap <A-z> :bp<CR>
 nnoremap <A-x> :bn<CR>
 nnoremap <A-c> :bd<CR>
 nnoremap <A-f> :Fd<CR>
+nnoremap <A-w> :Find<CR>
 nnoremap <A-r> :Rg<CR>
 nnoremap <A-b> :Buffers<CR>
 nnoremap <A-g> :LazyGit<CR>
@@ -138,6 +139,7 @@ nnoremap Ω :bp<CR>
 nnoremap « :bn<CR>
 nnoremap © :bd<CR>
 nnoremap ƒ :Fd<CR>
+nnoremap ∑ :Find<CR>
 nnoremap ® :Rg<CR>
 nnoremap ∫ :Buffers<CR>
 nnoremap ˙ :LazyGit<CR>
