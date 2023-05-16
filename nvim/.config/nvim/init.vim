@@ -30,7 +30,7 @@ set wildmode=longest,list
 set number
 
 " Set rulers for good coding style
-set cc=80
+set cc=120
 hi ColorColumn guibg=#2d2d2d ctermbg=246
 
 " Allow auto-indenting depending on file type
@@ -118,6 +118,10 @@ nnoremap <silent> <Space> :NERDTreeToggle<CR>
 " Remove trailing whitespaces
 autocmd BufWritePre * :%s/\s\+$//e
 
+" ======================== Buffers ========================
+nnoremap <C-A> :vertical resize -1<CR>
+nnoremap <C-S> :vertical resize +1<CR>
+
 " Windows and Linux Keybinds
 nnoremap <A-z> :bp<CR>
 nnoremap <A-x> :bn<CR>
@@ -152,8 +156,30 @@ nnoremap æ :ALEDetail<CR>
 " Use fzf for spell checking suggestions
 nnoremap z= :call FzfSpell()<CR>
 
-" Allow exit terminal mode using ESC-ESC
+" ======================== Editor ==========================
+" Quote current word
+nmap <A-q> ysiw"
+nmap œ ysiw"
+
+" Quote current line
+nmap <A-v> cst"
+nmap √ cst"
+
+nmap <A-u> ysiw]
+nmap † ysiw]
+
+" ======================== Terminal ========================
 tnoremap <Esc><Esc> <C-\><C-n>
+
+tnoremap <C-w> <C-\><C-n><C-w><CR>
+tnoremap <A-t> <C-\><C-n>:FloatermToggle<CR>
+tnoremap <A-v> <C-\><C-n>:FloatermUpdate --wintype=vsplit<CR>
+tnoremap <A-f> <C-\><C-n>:FloatermUpdate --wintype=float<CR>
+command! -nargs=* R :FloatermSend <args>
+
+tnoremap ™ <C-\><C-n>:FloatermToggle<CR>
+tnoremap √ <C-\><C-n>:FloatermUpdate --wintype=vsplit<CR>
+tnoremap ƒ <C-\><C-n>:FloatermUpdate --wintype=float<CR>
 
 " ======================== Commands ========================
 command! Fd call fzf#run(fzf#wrap({'source': 'fd --follow --type f --hidden --exclude .git',
