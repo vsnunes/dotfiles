@@ -8,4 +8,4 @@ git/.config/git/config.local
 zsh/.config/zsh/.zsh_sessions
 zsh/.config/zsh/.zcompdump
 zsh/.config/zsh/.zsh_history
-zsh/.config/zsh/.p10k.zsh
+zsh/.config/zsh/.zprofile
