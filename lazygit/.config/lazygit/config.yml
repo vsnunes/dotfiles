@@ -28,6 +28,3 @@ git:
   log:
     showGraph: 'always'
     showWholeGraph: true
-os:
-  editCommand: 'nvim'
-  editCommandTemplate: '{{editor}} +{{line}} -- {{filename}}'

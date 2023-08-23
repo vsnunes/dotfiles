@@ -36,7 +36,7 @@ source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
 
 # Aliases
 alias g="git"
-alias gl="lazygit"
+alias lg="lazygit"
 alias ls="ls --color"
 alias ll="ls --color -lah"
 alias grep="grep --color=auto"
