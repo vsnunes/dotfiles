@@ -31,28 +31,11 @@ zvm_after_init_commands+=("source $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugi
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
+source $ZDOTDIR/.aliases
+
 # Prompt
 source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
 
-# Aliases
-alias g="git"
-alias lg="lazygit"
-alias ls="ls --color"
-alias ll="ls --color -lah"
-alias grep="grep --color=auto"
-alias egrep="egrep --color=auto"
-alias fgrep="fgrep --color=auto"
-alias rm="rm -i"
-alias cp="cp -i"
-alias mv="mv -i"
-alias vim="nvim"
-alias d="docker"
-alias ..="cd .."
-alias bc="bc -l"
-alias tf="terraform"
-
-alias -s md="nvim"
-alias -s json="jq"
 
 # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
