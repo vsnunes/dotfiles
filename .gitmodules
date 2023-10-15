@@ -10,3 +10,6 @@
 [submodule "zsh/.config/zsh/powerlevel10k"]
 	path = zsh/.config/zsh/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "tmux/tmux-power"]
+	path = tmux/tmux-power
+	url = https://github.com/wfxr/tmux-power.git
