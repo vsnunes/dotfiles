@@ -27,7 +27,8 @@ xmap ga <Plug>(EasyAlign)
 nmap ga <Plug>(EasyAlign)
 
 " ======================== Custom plugins configuration ========================
-let g:airline_theme                           = 'cool'
+let g:airline_theme                           = 'murmur'
+let g:airline_powerline_fonts                 = 1
 let g:airline#extensions#tabline#enabled      = 1
 let g:airline#extensions#tabline#left_sep     = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
