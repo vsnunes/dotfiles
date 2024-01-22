@@ -26,6 +26,15 @@ if command -v "navi" > /dev/null 2>&1; then
     source $ZDOTDIR/shell/navi.zsh
 fi
 
+# Kubernetes
+if command -v "kubectl" > /dev/null 2>&1; then
+  source $ZDOTDIR/shell/kubectl.zsh
+fi
+
+if command -v "helm" > /dev/null 2>&1; then
+  source <(helm completion zsh)
+fi
+
 # Plugins
 zvm_after_init_commands+=("source $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh")
 source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
