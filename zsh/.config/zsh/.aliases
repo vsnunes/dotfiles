@@ -1,8 +1,6 @@
 # Aliases
 alias g="git"
 alias lg="lazygit"
-alias ls="ls --color"
-alias ll="ls --color -lah"
 alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
@@ -18,3 +16,11 @@ alias kc="kubectl"
 
 alias -s md="nvim"
 alias -s json="jq"
+
+if command -v "eza" > /dev/null 2>&1; then
+    alias ls="eza"
+    alias ll="eza -lah"
+else
+    alias ls="ls --color"
+    alias ll="ls --color -lah"
+fi
