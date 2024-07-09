@@ -28,6 +28,15 @@ return {
           },
         },
       },
+      yamlls = {
+        settings = {
+          yaml = {
+            schemas = {
+              kubernetes = "globPattern",
+            },
+          },
+        },
+      },
     },
   },
 }

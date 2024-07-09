@@ -36,10 +36,10 @@ return {
       }
 
       opts.sources = {
-        { name = "path" }, -- file paths
         { name = "nvim_lsp", keyword_length = 1, priority = 10 }, -- from language server
         { name = "crates", keyword_length = 1, priority = 10 },
         { name = "luasnip", keyword_length = 1, priority = 7 }, -- for lua users
+        { name = "path" }, -- file paths
         { name = "nvim_lsp_signature_help", priority = 8 }, -- display function signatures with current parameter emphasized
         { name = "nvim_lua", keyword_length = 1, priority = 8 }, -- complete neovim's Lua runtime API such vim.lsp.*
         { name = "buffer", keyword_length = 1, priority = 5 }, -- source current buffer
