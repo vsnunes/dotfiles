@@ -7,5 +7,6 @@ Plug('preservim/nerdtree')
 Plug('airblade/vim-gitgutter')
 Plug('tpope/vim-surround')
 Plug('valloric/youcompleteme')
+Plug('sheerun/vim-polyglot')
 
 vim.call('plug#end')
