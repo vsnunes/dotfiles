@@ -1,10 +1,12 @@
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-autoload -Uz compinit promptinit
+# compinit -> advanced autocompletion abilities
+autoload -Uz compinit colors promptinit
 compinit
+colors
 promptinit
+
+setopt autocd # Automatically cd into the typed directory
+
+prompt redhat
 
 # Prevent commands starting with space from being written to the history
 setopt hist_ignore_space
@@ -12,6 +14,33 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
 setopt inc_append_history
+
+# vim mode
+bindkey -v
+
+# Change cursor shape for different vi modes.
+# block for all modes except insert where it's beam
+function zle-keymap-select () {
+    case $KEYMAP in
+        vicmd) echo -ne '\e[1 q';;      # block
+        viins|main) echo -ne '\e[5 q';; # beam
+    esac
+}
+zle -N zle-keymap-select
+zle-line-init() {
+    zle -K viins # initiate `vi insert` as keymap (can be removed if `bindkey -V` has been set elsewhere)
+    echo -ne "\e[5 q"
+}
+zle -N zle-line-init
+echo -ne '\e[5 q' # Use beam shape cursor on startup.
+preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
+
+# Edit line in vim with ctrl-e:
+autoload edit-command-line; zle -N edit-command-line
+bindkey '^e' edit-command-line
+bindkey -M vicmd '^e' edit-command-line
+
+source $ZDOTDIR/.aliases
 
 # fzf completion and key bindings
 if command -v "fzf" > /dev/null 2>&1; then
@@ -32,17 +61,5 @@ if command -v "helm" > /dev/null 2>&1; then
   source <(helm completion zsh)
 fi
 
-# Plugins
-zvm_after_init_commands+=("source $ZDOTDIR/plugins/zsh-vi-mode/zsh-vi-mode.plugin.zsh")
-source $ZDOTDIR/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+# Syntax highlighting
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-source $ZDOTDIR/.aliases
-
-# Prompt
-source $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme
-setopt autocd # automatically cd to folder
-setopt interactive_comments
-
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
