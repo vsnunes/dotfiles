@@ -1,4 +1,19 @@
 return {
+  -- disable noice floating cmdline window
+  {
+    "folke/noice.nvim",
+    opts = {
+      cmdline = {
+        enabled = false,
+      },
+      messages = {
+        enabled = false,
+      },
+      popupmenu = {
+        enabled = false,
+      },
+    },
+  },
   {
     "nvimdev/dashboard-nvim",
     opts = {
