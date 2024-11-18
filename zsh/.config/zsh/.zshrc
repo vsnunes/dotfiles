@@ -17,6 +17,7 @@ setopt inc_append_history
 
 # vim mode
 bindkey -v
+export KEYTIMEOUT=1
 
 # Change cursor shape for different vi modes.
 # block for all modes except insert where it's beam
