@@ -7,12 +7,21 @@ local cmp = require('cmp')
 local select_opts = { behavior = cmp.SelectBehavior.Select }
 
 cmp.setup({
+    window = {
+        completion = cmp.config.window.bordered(),
+        documentation = cmp.config.window.bordered(),
+    },
+    view = {
+        entries = {
+            follow_cursor = true,
+        }
+    },
     mapping = cmp.mapping.preset.insert({
         ['<C-u>'] = cmp.mapping.scroll_docs(-4),
         ['<C-d>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
         ['<C-e>'] = cmp.mapping.abort(),
-        ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<Tab>'] = cmp.mapping.confirm({ select = true }),
         ['<C-f>'] = cmp.mapping(function (fallback)
             if luasnip.jumpable(1) then
                 luasnip.jump(1)
@@ -27,7 +36,7 @@ cmp.setup({
                 fallback()
             end
         end, {'i', 's'}),
-        ['<Tab>'] = cmp.mapping(function (fallback)
+        ['<C-s>'] = cmp.mapping(function (fallback)
             local col = vim.fn.col('.') - 1
 
             if cmp.visible() then
@@ -38,7 +47,7 @@ cmp.setup({
                 cmp.complete()
             end
         end, {'i', 's'}),
-        ['<S-Tab>'] = cmp.mapping(function (fallback)
+        ['<C-w>'] = cmp.mapping(function (fallback)
             if cmp.visible() then
                 cmp.select_prev_item(select_opts)
             else

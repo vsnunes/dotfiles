@@ -38,13 +38,15 @@ Plug('hrsh7th/cmp-cmdline')
 Plug('hrsh7th/nvim-cmp')
 Plug('saadparwaiz1/cmp_luasnip')
 
+-- themes
+Plug('catppuccin/nvim', {as = 'catppuccin'})
+
 vim.call('plug#end')
+
+vim.cmd.colorscheme "catppuccin"
 
 -- Keybind mappings
 require('mappings')
-
--- lsp
-require('lsp')
 
 -- Plugins
 require('plugins.nvim-tree')
@@ -57,3 +59,5 @@ require('plugins.nvim-lint')
 require('plugins.nvim-cmp')
 require('plugins.gitsigns')
 require('plugins.FTerm')
+require('plugins.nvim-lspconfig')
+
