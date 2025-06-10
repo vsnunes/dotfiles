@@ -1,5 +1,7 @@
 # compinit -> advanced autocompletion abilities
+autoload bashcompinit
 autoload -Uz compinit colors promptinit
+bashcompinit
 compinit
 colors
 promptinit
@@ -42,6 +44,7 @@ bindkey '^e' edit-command-line
 bindkey -M vicmd '^e' edit-command-line
 
 source $ZDOTDIR/.aliases
+source $ZDOTDIR/utils.zsh
 
 # fzf completion and key bindings
 if command -v "fzf" > /dev/null 2>&1; then
@@ -64,3 +67,4 @@ fi
 
 # Syntax highlighting
 source $ZDOTDIR/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source $ZDOTDIR/plugins/fzf-tab/fzf-tab.plugin.zsh

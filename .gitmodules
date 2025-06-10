@@ -13,3 +13,6 @@
 [submodule "tmux/tmux-power"]
 	path = tmux/tmux-power
 	url = https://github.com/wfxr/tmux-power.git
+[submodule "zsh/.config/zsh/plugins/fzf-tab"]
+	path = zsh/.config/zsh/plugins/fzf-tab
+	url = https://github.com/Aloxaf/fzf-tab.git

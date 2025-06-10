@@ -14,3 +14,4 @@ fi
 # Common variables
 export EDITOR="nvim"
 export PAGER="less"
+
