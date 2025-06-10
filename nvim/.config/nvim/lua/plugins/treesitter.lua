@@ -1,4 +1,8 @@
 require'nvim-treesitter.configs'.setup {
+    ensure_installed = { "lua", "markdown", "vim" },
+    sync_install = false,
+    auto_install = true,
+    ignore_install = { "javascript" },
     highlight = {
         enable = true,
     },
@@ -11,4 +15,5 @@ require'nvim-treesitter.configs'.setup {
             node_decremental = "grm",
         },
     },
+    modules = {}
 }

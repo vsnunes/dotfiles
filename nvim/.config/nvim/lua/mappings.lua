@@ -16,7 +16,7 @@ map('n', '<leader>sh', ':split<CR>:bnext<CR>')
 
 -- common cmds
 map('n', '<leader>z', function()
-    vim.opt.wrap = not(vim.opt.wrap:get())
+    vim.wo.wrap = not vim.wo.wrap
 end)
 
 map('n', '<leader>e', function()
@@ -32,10 +32,10 @@ vim.keymap.set('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help 
 
 -- diagnostics
 vim.keymap.set('n', '<C-n>', function()
-    vim.diagnostic.goto_next()
+    vim.diagnostic.jump({count = 1, float = true})
 end)
 vim.keymap.set('n', '<C-p>', function()
-    vim.diagnostic.goto_prev()
+    vim.diagnostic.jump({count = -1, float = true})
 end)
 vim.keymap.set('n', '<C-m>', function()
     vim.diagnostic.open_float()
