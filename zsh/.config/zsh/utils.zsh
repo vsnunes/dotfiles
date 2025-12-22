@@ -15,3 +15,4 @@ date-to-timestamp()
 
 zle -N date-to-timestamp
 bindkey -M vicmd t date-to-timestamp
+

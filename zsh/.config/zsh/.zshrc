@@ -6,15 +6,15 @@ compinit
 colors
 promptinit
 
+BACKGROUND_JOBS="%(1j.%F{red}[↺ %j] %f.)"
+PS1="$BACKGROUND_JOBS%B%{$fg[red]%}[%{$fg[yellow]%}%n%{$fg[green]%}@%{$fg[blue]%}%m %{$fg[cyan]%}%1d%{$fg[red]%}]%{$reset_color%}$%b ❯ "
+
 setopt autocd # Automatically cd into the typed directory
 
-prompt redhat
-
-# Prevent commands starting with space from being written to the history
-setopt hist_ignore_space
 HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
+HISTCONTROL=ignoreboth # ignore commands start with space or consecutive duplicates
 setopt inc_append_history
 
 # vim mode
@@ -43,7 +43,7 @@ autoload edit-command-line; zle -N edit-command-line
 bindkey '^e' edit-command-line
 bindkey -M vicmd '^e' edit-command-line
 
-source $ZDOTDIR/.aliases
+source $ZDOTDIR/aliases.zsh
 source $ZDOTDIR/utils.zsh
 
 # fzf completion and key bindings
