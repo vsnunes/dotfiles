@@ -22,7 +22,6 @@ Plug('windwp/nvim-autopairs') -- autopairs for brackets
 Plug('numToStr/Comment.nvim') -- for comments
 Plug('kylechui/nvim-surround') -- surround selections
 Plug('mfussenegger/nvim-lint') -- linting
-Plug('neovim/nvim-lspconfig') -- configs for lsp
 Plug('lewis6991/gitsigns.nvim') -- gitsigns
 Plug('numToStr/FTerm.nvim') -- floating terminal
 
@@ -48,6 +47,8 @@ vim.cmd.colorscheme "catppuccin"
 -- Keybind mappings
 require('mappings')
 
+require('lsp')
+
 -- Plugins
 require('plugins.nvim-tree')
 require('plugins.treesitter')
@@ -59,5 +60,4 @@ require('plugins.nvim-lint')
 require('plugins.nvim-cmp')
 require('plugins.gitsigns')
 require('plugins.FTerm')
-require('plugins.nvim-lspconfig')
 

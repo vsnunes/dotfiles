@@ -1,4 +1,6 @@
 vim.lsp.config("lua_ls", {
+    cmd = { 'lua-language-server' },
+    filetypes = { 'lua' },
     settings = {
         Lua = {
             runtime = {
@@ -20,3 +22,10 @@ vim.lsp.config("lua_ls", {
     },
 })
 
+vim.lsp.config("bashls", {
+    cmd = { 'bash-language-server', 'start' },
+    filetypes = { 'bash', 'sh' }
+})
+
+vim.lsp.enable 'lua_ls'
+vim.lsp.enable 'bashls'

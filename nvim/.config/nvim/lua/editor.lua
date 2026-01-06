@@ -24,4 +24,5 @@ vim.diagnostic.config({
         },
     },
     float = { border = float_border },
+    virtual_text = true
 })
