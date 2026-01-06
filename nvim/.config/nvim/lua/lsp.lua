@@ -27,5 +27,11 @@ vim.lsp.config("bashls", {
     filetypes = { 'bash', 'sh' }
 })
 
+vim.lsp.config("pyright", {
+    cmd = { 'pyright-langserver', '--stdio' },
+    filetypes = { 'python' }
+})
+
 vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'bashls'
+vim.lsp.enable 'pyright'
