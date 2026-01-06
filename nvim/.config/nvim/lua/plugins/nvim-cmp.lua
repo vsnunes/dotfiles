@@ -98,6 +98,7 @@ cmp.setup({
 
 -- lspconfig
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
-require('lspconfig')['lua_ls'].setup {
+
+vim.lsp.config("lua_ls", {
     capabilities = capabilities
-}
+})
