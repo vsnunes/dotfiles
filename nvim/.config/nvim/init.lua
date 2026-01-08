@@ -24,6 +24,7 @@ Plug('kylechui/nvim-surround') -- surround selections
 Plug('mfussenegger/nvim-lint') -- linting
 Plug('lewis6991/gitsigns.nvim') -- gitsigns
 Plug('numToStr/FTerm.nvim') -- floating terminal
+Plug('neovim/nvim-lspconfig') -- lsp configs
 
 -- snippets
 Plug('L3MON4D3/LuaSnip')

@@ -32,6 +32,21 @@ vim.lsp.config("pyright", {
     filetypes = { 'python' }
 })
 
+vim.lsp.config("gopls", {
+    cmd = { 'gopls' },
+    filetypes = { "go", "gomod", "gowork", "gotmpl" },
+    settings = {
+        gopls = {
+            analyses = {
+                unusedparams = true,
+            },
+            staticcheck = true,
+            gofumpt = true,
+        },
+    },
+})
+
 vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'bashls'
 vim.lsp.enable 'pyright'
+vim.lsp.enable 'gopls'
