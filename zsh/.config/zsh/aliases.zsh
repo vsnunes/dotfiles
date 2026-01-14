@@ -13,7 +13,7 @@ alias d="docker"
 alias ..="cd .."
 alias bc="bc -l"
 alias tf="terraform"
-alias kc="kubectl"
+alias k="kubectl"
 alias nb="newsboat"
 
 alias -s md="nvim"
