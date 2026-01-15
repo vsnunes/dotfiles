@@ -30,6 +30,14 @@ vim.keymap.set('n', '<leader>fg', telescope.live_grep, { desc = 'Telescope live 
 vim.keymap.set('n', '<leader>fb', telescope.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help tags' })
 
+vim.keymap.set('n', '<leader>fw', function()
+    telescope.grep_string({search = vim.fn.expand("<cword>")})
+end, { desc = 'Telescope grep current word' })
+
+vim.keymap.set('n', '<leader>fe', function()
+    telescope.grep_string({search = vim.fn.expand("<cWORD>")})
+end, { desc = 'Telescope grep current expression' })
+
 -- diagnostics
 vim.keymap.set('n', '<C-n>', function()
     vim.diagnostic.jump({count = 1, float = true})
