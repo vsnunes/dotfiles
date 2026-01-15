@@ -29,6 +29,9 @@ vim.keymap.set('n', '<leader>ff', telescope.find_files, { desc = 'Telescope find
 vim.keymap.set('n', '<leader>fg', telescope.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', telescope.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', telescope.help_tags, { desc = 'Telescope help tags' })
+vim.keymap.set('n', '<leader>fc', telescope.command_history, { desc = 'Telescope command history' })
+vim.keymap.set('n', '<leader>fr', telescope.current_buffer_fuzzy_find, { desc = 'Telescope current buffer fuzzy' })
+vim.keymap.set('n', '<leader>fd', telescope.diagnostics, { desc = 'Telescope diagnostics' })
 
 vim.keymap.set('n', '<leader>fw', function()
     telescope.grep_string({search = vim.fn.expand("<cword>")})
