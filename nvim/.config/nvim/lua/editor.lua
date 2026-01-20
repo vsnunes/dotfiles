@@ -26,3 +26,5 @@ vim.diagnostic.config({
     float = { border = float_border },
     virtual_text = true
 })
+
+vim.o.winborder = 'rounded'

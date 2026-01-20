@@ -23,6 +23,8 @@ map('n', '<leader>e', function()
     require('nvim-tree.api').tree.toggle()
 end)
 
+map('n', '<S-k>', vim.lsp.buf.hover)
+
 -- Telescope
 local telescope = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', telescope.find_files, { desc = 'Telescope find files' })
