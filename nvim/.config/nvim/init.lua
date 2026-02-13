@@ -13,7 +13,7 @@ local Plug = vim.fn['plug#']
 
 vim.call('plug#begin')
 
-Plug('nvim-telescope/telescope.nvim', { tag = '0.1.8' }) -- for searching
+Plug('nvim-telescope/telescope.nvim') -- for searching
 Plug('nvim-lua/plenary.nvim')
 Plug('nvim-treesitter/nvim-treesitter') -- improved highlighting
 Plug('nvim-tree/nvim-tree.lua') -- file explorer
