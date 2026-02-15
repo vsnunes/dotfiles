@@ -25,6 +25,7 @@ Plug('mfussenegger/nvim-lint') -- linting
 Plug('lewis6991/gitsigns.nvim') -- gitsigns
 Plug('numToStr/FTerm.nvim') -- floating terminal
 Plug('neovim/nvim-lspconfig') -- lsp configs
+Plug('nvim-mini/mini.align') -- to align text
 
 -- snippets
 Plug('L3MON4D3/LuaSnip')
@@ -61,4 +62,5 @@ require('plugins.nvim-lint')
 require('plugins.nvim-cmp')
 require('plugins.gitsigns')
 require('plugins.FTerm')
+require('plugins.align')
 
