@@ -8,6 +8,9 @@ local cmp = require('cmp')
 local select_opts = { behavior = cmp.SelectBehavior.Select }
 
 cmp.setup({
+    completion = {
+        autocomplete = false,
+    },
     window = {
         completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered(),
