@@ -1,5 +1,4 @@
 -- keybind mappings
--- Plugin specific mappings are on the lua/plugins/pluginname.lua files
 
 local function map(m, k, v)
     vim.keymap.set(m, k, v, { noremap = true, silent = true })
@@ -54,3 +53,7 @@ vim.keymap.set('n', '<C-m>', function()
     vim.diagnostic.open_float()
 end)
 
+vim.keymap.set('n', '<leader>gl', '<cmd>LazyGit<cr>', { desc = 'Open LazyGit' } )
+
+-- My commands
+vim.keymap.set('n', '<leader>cf', '<cmd>Fmt<cr>')

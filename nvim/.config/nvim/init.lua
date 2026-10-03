@@ -26,6 +26,7 @@ Plug('lewis6991/gitsigns.nvim') -- gitsigns
 Plug('numToStr/FTerm.nvim') -- floating terminal
 Plug('neovim/nvim-lspconfig') -- lsp configs
 Plug('nvim-mini/mini.align') -- to align text
+Plug('kdheepak/lazygit.nvim') -- LazyGit
 
 -- snippets
 Plug('L3MON4D3/LuaSnip')
@@ -45,6 +46,8 @@ Plug('catppuccin/nvim', {as = 'catppuccin'})
 vim.call('plug#end')
 
 vim.cmd.colorscheme "catppuccin"
+
+require('commands')
 
 -- Keybind mappings
 require('mappings')
