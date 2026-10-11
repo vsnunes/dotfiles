@@ -55,5 +55,20 @@ end)
 
 vim.keymap.set('n', '<leader>gl', '<cmd>LazyGit<cr>', { desc = 'Open LazyGit' } )
 
+-- opencode
+local opencode = require('opencode')
+vim.keymap.set({ 'n', 'x' }, '<C-a>', function()
+    opencode.ask('@this: ')
+end, { desc = 'Ask OpenCode' })
+vim.keymap.set({ 'n', 'x' }, '<C-x>', function()
+    opencode.select()
+end, { desc = 'Select OpenCode' })
+vim.keymap.set({ 'n', 'x' }, 'go', function()
+    return opencode.operator('@this')
+end, { desc = 'Send range to Opencode', expr = true })
+vim.keymap.set({ 'n', 'x' }, 'goo', function()
+    return opencode.operator('@this') .. "_"
+end, { desc = 'Send line to Opencode', expr = true })
+
 -- My commands
 vim.keymap.set('n', '<leader>cf', '<cmd>Fmt<cr>')

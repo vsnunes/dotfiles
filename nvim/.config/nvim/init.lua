@@ -27,6 +27,7 @@ Plug('numToStr/FTerm.nvim') -- floating terminal
 Plug('neovim/nvim-lspconfig') -- lsp configs
 Plug('nvim-mini/mini.align') -- to align text
 Plug('kdheepak/lazygit.nvim') -- LazyGit
+Plug('nickjvandyke/opencode.nvim') -- opencode
 
 -- snippets
 Plug('L3MON4D3/LuaSnip')
