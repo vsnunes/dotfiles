@@ -46,7 +46,14 @@ vim.lsp.config("gopls", {
     },
 })
 
+vim.lsp.config("tofu_ls", {
+    cmd = { 'tofu-ls', 'serve' },
+    filetypes = { 'terraform', 'tf' },
+    root_markers = {'.terraform', '.git'},
+})
+
 vim.lsp.enable 'lua_ls'
 vim.lsp.enable 'bashls'
 vim.lsp.enable 'pyright'
 vim.lsp.enable 'gopls'
+vim.lsp.enable 'tofu_ls'
